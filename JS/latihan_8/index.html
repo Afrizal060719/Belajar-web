@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistem Parkir Mall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sistem Parkir Mall</h1>
+
+        <div class="form-group">
+            <label for="jamParkir">Masukkan Lama Parkir (Jam)</label>
+            <input type="number" id="jamParkir" placeholder="Contoh: 6">
+        </div>
+
+        <button id="btnHitung">Hitung Biaya</button>
+
+        <div class="hasil">
+            <p>Total Sebelum Diskon: <span id="totalSebelum">-</span></p>
+            <p>Diskon: <span id="diskon">-</span></p>
+            <p>Total Bayar: <span id="totalBayar">-</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

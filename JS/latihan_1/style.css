@@ -1,0 +1,45 @@
+.content {
+    margin: 20px;
+}
+
+.content h1 {
+    text-align: center;
+    color: #333;
+}
+.content h1:hover {
+    color: #3d2298;
+}
+
+.inputgroup {
+    border: 3px solid #825656;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    padding: 5px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.tombol {
+    width: 100px;
+}
+
+.hasil {
+    display: block;      
+    width: fit-content;  
+    margin: 0 auto;    
+    text-align: center;
+
+}

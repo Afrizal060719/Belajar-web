@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS 7</title>
+</head>
+<body>
+    <h1>Belajar For / Perulangan</h1>
+
+    <form name="selectForm">
+    <label for="musicTypes"
+        >Pilih beberapa jenis musik, lalu klik tombol di bawah ini:</label
+    >
+    <select id="musicTypes" name="musicTypes" multiple>
+        <option selected>R&amp;B</option>
+        <option>Jazz</option>
+        <option>Blues</option>
+        <option>New Age</option>
+        <option>Classical</option>
+        <option>Opera</option>
+    </select>
+    <button id="btn" type="button">Berapa banyak yang terpilih?</button>
+    </form>
+
+    <script>
+        function countSelected(selectObject) {
+        let numberSelected = 0;
+        for (let i = 0; i < selectObject.options.length; i++) {
+            if (selectObject.options[i].selected) {
+            numberSelected++;
+            }
+        }
+        return numberSelected;
+        }
+
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+        const musicTypes = document.selectForm.musicTypes;
+        console.log(`anda telah memilih ${countSelected(musicTypes)} opsi(s).`);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+body {
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Judul */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* div utama */
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    gap: 20px;
+    padding: 10px;
+    margin: 100px;
+}
+
+/* form tugas dan add tambah */
+.tambah-tugas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+.input-tugas {
+    width: 400px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.input-tugas::placeholder {
+    text-align: center;
+    font-size: 15px;
+}
+
+.input-tugas:focus {
+    box-shadow: 0 0 20px rgba(127, 255, 212);
+}
+
+#btn-tambah {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#btn-tambah:hover {
+    background-color: aquamarine
+}
+
+/* list tugas */
+.list-tugas {
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dtugas {
+    font-size: 1.2rem;
+    margin: 15px;
+    border-bottom: 3px solid #0984e3;
+    padding-bottom: 5px;
+    align-self: flex-start;
+
+}
+
+.list {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+#daftar-list li {
+    background-color: #ffffff;
+    padding: 12px 15px;
+    margin: 10px;
+    border: 1px solid #dfe6e9;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+

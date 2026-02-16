@@ -1,0 +1,37 @@
+const inputTugas = document.getElementById("input-tugas");
+const tambah = document.getElementById("btn-tambah");
+const list = document.getElementById("daftar-list");
+
+tambah.addEventListener('clik', function() {
+
+    const nilaiTugas = inputTugas.value;
+
+    if (inputTugas.trim() === "") {
+
+        alert("form tidak boleh kosong");
+
+        return;
+
+    }
+
+    const li = document.createElement("li");
+
+    li.innerHTML = `
+    ${nilaiTugas}
+    <button class="btn-hapus">X</button>
+    `;
+
+    list.appendChild(li);
+    inputTugas.value = "";
+
+    const btnHapus = li.querySelector(".btn-hapus");
+
+    btnHapus.addEventListener('clik', function() {
+
+        li.remove();
+
+    });
+
+});
+
+ini code js yang belum ada simpan local storage dan menampilkan data saat user masuk halaman ulang

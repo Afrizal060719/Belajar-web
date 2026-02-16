@@ -1,0 +1,35 @@
+/* universal css */
+* {
+    font-family: Arial;
+}
+
+/* type selector */
+
+h1 {
+    color:chocolate;
+}
+
+h3 {
+    color: tomato;
+}
+
+p {
+    font-size: 18px;
+    color: rgb(47, 119, 119);
+}
+
+/* class selector */
+
+li.nasgor {
+    color: orange;
+}
+
+/* id selector */
+
+#soto {
+    color: green;
+}
+
+#tehanget {
+    color: blue;
+}

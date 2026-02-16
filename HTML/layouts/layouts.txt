@@ -1,0 +1,12 @@
+padding digunakan untuk mengatur jarak elemen yang berada di dalam 
+contoh sebuah box yang bertuliskan "susu sapi murni" maka jara antara tulisan dan sisi box itu adalah padding
+
+margin jarak antara container dengan sisi sisi layar
+
+text align : center di gunakan untuk membuat teks ke tengah
+border: 2px solid untuk membuat tabel di dalam sebuat div atau class dengan ketebalan 2px dengan warna hitam
+border-radius :  4px  untuk lengkungan border
+
+gap digunakan untuk memberi jarak antar class
+
+display-flex digunakan untuk membuat rata / sejajar / herizontal

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portal Karyawan</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f2f4f7;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background-color: #ffffff;
+        padding: 25px 30px;
+        width: 320px;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #555;
+      }
+
+      select {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #1e40af;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Portal Karyawan</h2>
+
+      <div class="form-group">
+        <label>Status Login</label>
+        <select id="loginStatus">
+          <option value="">-- pilih status login --</option>
+          <option value="true">Sudah Login</option>
+          <option value="false">Belum Login</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Jabatan</label>
+        <select id="role">
+          <option value="">-- pilih jabatan --</option>
+          <option value="admin">Admin</option>
+          <option value="manager">Manager</option>
+          <option value="staff">Staff</option>
+        </select>
+      </div>
+
+      <button id="checkBtn">Cek Akses</button>
+    </div>
+
+    <script>
+        const btn = document.getElementById("checkBtn");
+
+        btn.addEventListener("click", function () {
+            const loginS = document.getElementById('loginStatus').value;
+            const role = document.getElementById('role').value;
+
+            const isLogin = loginS === "true";
+
+           if (isLogin && (role === "admin" || role === "manager")) {
+                console.log("Akses diberikan");
+            } else {
+                console.log("Akses tidak diberikan");
+            }
+        });
+    </script>
+  </body>
+</html>

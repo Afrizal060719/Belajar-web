@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS 9</title>
+</head>
+<body>
+    <h1>Belajar Tipe data Number</h1>
+    <input type="text" placeholder="masukan umur" id="umur">
+    <input type="text" placeholder="masukan tgl lahir" id="lahir">
+    <button id="tombol">ADD</button>
+
+    <script>
+        let btn = document.getElementById('tombol');
+        btn.addEventListener('click', function() {
+            let Umur = document.getElementById('umur').value;
+            let lahir = document.getElementById('lahir').value;
+
+            let numur = parseInt (Umur);
+            let nlahir = parseInt (lahir);  
+            
+            // || or true - true = true, true - false = true
+            // 
+            // && and
+            
+
+            let total = numur + nlahir;
+            if (numur <= 50 && nlahir <= 20) {
+                console.log('anda sudah bisa mabuk');
+            } else {
+                console.log('anda pasti SH');
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        * {
+            font-family: Arial;
+        }
+
+        .container {
+            border: 1px solid black;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* width: 600px; */
+        }
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            justify-content: center;
+        }
+
+        #add {
+            margin-top: 10px;
+            border-radius: 10px;
+            background-color: #ffff;
+        }
+
+        #add:hover {
+            background-color:crimson;
+        }
+
+        .list {
+            border: 1px solid black;
+            width: 500px;
+            margin-top: 10px;
+        }
+
+        .list ul {
+            width: 100%;
+            max-width: 500px;
+            list-style: none;
+            padding: 5px;
+        }
+
+        .list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .list button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="text" id="input" placeholder="Masukan Teks Nya Shu">
+            <button id="add">ADD</button>
+        </div>
+        <div class="list">
+            <ul id="list">
+                <!-- <li>tes<button class="delete-btn">X</button></li> -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById('input');
+        const tombol = document.getElementById('add');
+        const daftar = document.getElementById('list');
+
+        const isi = localStorage.getItem('isi');
+        if (isi) {
+            daftar.innerHTML = isi;
+        }
+
+        tombol.addEventListener('click', function() {
+            const wadah = input.value;
+            if (wadah.trim() === "" ) {
+                alert('form gk oleh kosong cok');
+                return;
+            }
+
+            const listB = document.createElement('li');
+            listB.innerHTML = `${wadah} <button class="delete-btn">X</button>`;
+
+            daftar.appendChild(listB);
+
+            input.value = '';
+
+            localStorage.setItem('isi', daftar.innerHTML);
+        });
+
+        daftar.addEventListener('click', function(e) {
+            if (e.target.classList.contains('delete-btn')) {
+                e.target.parentElement.remove();
+            }
+
+            localStorage.setItem('isi', daftar.innerHTML);
+        });
+    </script>
+</body>
+</html>

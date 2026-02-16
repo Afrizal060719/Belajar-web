@@ -1,0 +1,11 @@
+Navbar Responsive
+
+membuat navbar sederhana, menggunakan html, css, js
+html sudah baik
+css belum seberapa paham
+js cukup baik
+
+catatan belajar lagi dan berikan laporannya
+
+evaluasi untuk css
+untuk struktur dan logika dan fungsi syntax harus belajar lagi

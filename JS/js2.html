@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS 2</title>
+</head>
+<body>
+    <h1>Belajar localstorage</h1>
+    <input type="text" id="satu">
+    <button id="tombol">add</button>
+    <button id="hapus">X</button>
+    <br>
+    <span id="span"></span>
+
+    <script>
+
+        // varibel untuk menampung semua id yang ada di html
+        const input = document.getElementById('satu');
+        const tombol = document.getElementById('tombol');
+        const span = document.getElementById('span');
+        const delet = document.getElementById('hapus');
+
+        // memberikan nama key untuk localstorage yang berisi value
+        // dan mengembalikan data saat web di refresh dan saat user masuk
+        // ulang ( data yang di masukan user )
+        const isi = localStorage.getItem('isi');
+        if (isi) {
+            span.textContent = isi;
+        }
+
+        // logika untuk tombol add dan penyimpanan localstorage
+        tombol.addEventListener('click', function() {
+            const wadah = document.getElementById('satu').value;
+            span.textContent = wadah;
+
+            localStorage.setItem('isi', wadah);
+        });      
+        
+        // logika untuk mengahpus isi dari localstorage
+        delet.addEventListener('click', function() {
+            localStorage.removeItem('isi');
+            span.textContent = '';
+        })
+    </script>
+</body>
+</html>

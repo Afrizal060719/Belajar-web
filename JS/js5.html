@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS 5</title>
+</head>
+<body>
+    <h1>Belajar operator kesamaan ==, kesamaan ketat ===, and &&</h1>
+    <p>Operator kesamaan : == berfungsi untuk membandingkan nilai</p>
+    <p>Operator kesamaan ketat : === berfungsi untuk membandingkan nilai dan tipe data jadi ini lebih aman</p>
+    <p>Operator and : && berfungsi untuk syrat melanjutkan kondisi, operator ini berjalan dari kiri ke kanan
+    dan jika 2 nilai salah maka hasilnya false dan jika 2 nilai benar maka true / melanjutkan pengkondisian</p>
+    <!-- belajar  -->
+    <script>
+        const emailName = "dani";
+        const passwoard = "1234";
+
+        if (emailName === "dani" && passwoard === "1234") {
+            console.log("login berhasil");
+        } else {
+            console.log("login gagal");
+        }
+    </script>
+</body>
+</html>
