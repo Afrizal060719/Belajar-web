@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expresion & operator</title>
+</head>
+<body>
+    <h1>Operator In</h1>
+
+    <script>
+        const mobil = {nama: "fortuner", harga: 500000000, type: "suv"};
+        delete mobil.harga;
+        if ("harga" in mobil === false) {
+            mobil.harga = 200000000;
+        }
+        console.log("harga" in mobil);
+        console.log("roda" in mobil);
+    </script>
+</body>
+</html>
