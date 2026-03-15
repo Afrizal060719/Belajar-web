@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul 3 Function</title>
+</head>
+<body>
+    <h1>latihan function</h1>
+    <script>
+        const smartrCalculator = (operation) => {
+            if (operation === "add") {
+                return (a, b) => a + b;
+            }
+            else if (operation === "multiply") {
+                return (a, b) => a * b;
+            }
+            else if (operation === "divide") {
+                return (a, b) => {
+                    if (b === 0) {
+                        return "nilai tidak boleh 0";
+                    }
+                    return a / b;
+                } 
+            }
+            else if (operation === "subtract") {
+                return (a, b) => a - b;
+            }
+            else {
+                return (invalid) => console.log("nilai tidak boleh 0");
+            }
+        };
+
+        const add = smartrCalculator("add");
+        console.log(add(4, 7));
+
+        const multiply = smartrCalculator("multiply");
+        console.log(multiply(4, 8));
+
+        const divide = smartrCalculator("divide");
+        console.log(divide(39, 0));
+
+        const subtract = smartrCalculator("subtract");
+        console.log(subtract(90, 74));
+
+        const invalid = smartrCalculator("invalid");
+        console.log(invalid());
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir UMKM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>UMKM kasir</h1>
+    <hr>
+    <div class="produk">
+        <h1>manajemen produk</h1>
+        <form class="inputproduk" id="produk">
+            <div class="input">
+                <span>masukan nama barang</span>
+                <input type="text" placeholder="nama barang" id="namaProduk">
+            </div>
+            <div class="input">
+                <span>masukan harga barang</span>
+                <input type="number" placeholder="harga barang" id="hargaBarang">
+            </div>
+            <div class="input">
+                <span>masukan jumlah barang</span>
+                <input type="number" placeholder="jumlah barang" id="jumlahBarang">
+            </div>
+            <div class="input">
+                <span>kategori</span>
+                <select id="kategori">
+                    <option></option>
+                    <option>minuman</option>
+                    <option>makanan</option>
+                    <option>kosmetik</option>
+                </select>
+            </div>
+            <button type="submit" class="tombol">tambah</button>
+        </form>
+        <table>
+           <thead>
+                <tr>
+                    <th>nama</th>
+                    <th>harga</th>
+                    <th>stok</th>
+                    <th>kategori</th>
+                    <th>aksi</th>
+                </tr>
+           </thead>
+           <tbody id="datafrom"></tbody>
+        </table>
+    </div>
+
+    <br>
+
+    <div class="transaksi">
+        <h1>transaksi pembayaran</h1>
+        <form class="inputpembayaran" id="pembayaran">
+            <div class="inputT">
+                <select id="pilihbarang">
+                    <option></option>
+                </select>
+            </div>
+            <div class="inputT">
+                <input type="number" placeholder="masukan jumlah barang" id="banyakBarang">
+            </div>
+            <div class="inputT">
+                <button>tambah</button>
+            </div>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>nama</th>
+                    <th>harga</th>
+                </tr>
+            </thead>
+            <tbody id="databayar"></tbody>
+        </table> 
+        <button id="totalBelanja">total</button>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

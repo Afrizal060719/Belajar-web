@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modul 3 function</title>
+</head>
+<body>
+    <h1>Latihan Function</h1>
+
+    <script>
+        function smartCalculator(operation) {
+            if (operation === "add") {
+                return function(a, b){
+                    return a + b;
+                }
+            }
+
+            else if (operation === "multiply") {
+                return function(a, b) {
+                    return a * b;
+                }
+            }
+
+            if (operation === "divide") {
+                return function(a, b) {
+                    return a / b;
+                }
+            } 
+            
+            else if (operation === "subtract") {
+                return function(a, b) {
+                    return a - b;
+                }
+            }
+        };
+
+        const add = smartCalculator("add");
+        console.log(add(2, 3));
+
+        const multiply = smartCalculator("multiply");
+        console.log(multiply(2, 3));
+
+        const divide = smartCalculator("divide");
+        console.log(divide(15, 4));
+
+        const subtract = smartCalculator("subtract");
+        console.log(subtract(20, 6));
+    </script>
+</body>
+</html>

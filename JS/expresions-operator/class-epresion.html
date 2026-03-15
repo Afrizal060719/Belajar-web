@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistem Absensi</title>
+</head>
+<body>
+
+    <h2>Tambah Siswa</h2>
+
+    <input type="text" id="studentName" placeholder="Nama Siswa">
+    <input type="text" id="studentClass" placeholder="Kelas">
+    <button onclick="addStudent()">Tambah</button>
+
+    <h3>Daftar Siswa:</h3>
+    <ul id="studentList"></ul>
+
+    <h4>Total Siswa: <span id="totalStudent">0</span></h4>
+
+    <script>
+        class Student {
+            constructor(siswa, kelas) {
+                this.siswa = siswa;
+                this.kelas = kelas;
+            }
+
+            display() {
+                return `nama : ${this.siswa} kelas : ${this.kelas}`;
+            }
+        }
+
+        const absensi = [];
+
+        function addStudent() {
+            const inputSiswa = document.getElementById('studentName');
+            const inputKelas = document.getElementById('studentClass');
+
+            const siswa = inputSiswa.value;
+            const kelas = inputKelas.value;
+
+            newStudent = new Student(siswa, kelas);
+            absensi.push(newStudent);
+
+            renderStundent();
+            
+            inputSiswa.value = "";
+            inputKelas.value = "";
+        }
+
+        function renderStudent() {
+            const list = dosument.getElementById('studentList');
+            list.innerHTML = "";
+            
+        }
+    </script>
+
+</body>
+</html>

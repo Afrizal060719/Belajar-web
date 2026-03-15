@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class expresion</title>
+</head>
+<body>
+    <h2>Tambah Produk</h2>
+
+    <input type="text" id="name" placeholder="nama produk">
+    <input type="number" id="price" placeholder="harga produk">
+    <button onclick="addProduct()">Tambah</button>
+
+    <h3>Daftar Produk</h3>
+    <ul id="list-product"></ul>
+
+    <script>
+        class Product {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            display() {
+                return `${this.name} - Rp ${this.price}`;
+            }
+        }
+
+        const products = [];
+
+        function addProduct() {
+            const inputName = document.getElementById('name');
+            const inputPrice = document.getElementById('price');
+
+            const name = inputName.value;
+            const price = inputPrice.value;
+
+            const newProduct = new Product(name, price);
+            products.push(newProduct);
+
+            renderProducts();
+
+            inputName.value = "";
+            inputPrice.value = "";
+        }
+        function renderProducts() {
+            const list = document.getElementById('list-product');
+            list.innerHTML = "";
+                products.forEach(product => {
+                const li = document.createElement('li');
+                li.textContent = product.display();
+                list.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

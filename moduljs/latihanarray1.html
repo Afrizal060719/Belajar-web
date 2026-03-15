@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul 4 array</title>
+</head>
+<body>
+    <h1>Latihan Array</h1>
+    
+
+    <script>
+        const user = [
+            {
+                id: 1,
+                nama: "dani",
+                umur: 19,
+                skor: 80,
+                tidakAktif: true,
+                hobi: ["coding", "membaca"],
+                alamat: {kota: "sidoarjo", provinsi: "jawa timur"}
+            },
+            {
+                id: 2,
+                nama: "rudy",
+                umur: 20,
+                skor: 90,
+                tidakAktif: false,
+                hobi: ["bermain game", "membaca"],
+                alamat: {kota: "surabaya", provinsi: "jawa timur"}
+            },
+            {
+                id: 3,
+                nama: "budi",
+                umur: 21,
+                skor: 60,
+                tidakAktif: true,
+                hobi: ["bermain game", "membaca"],
+                alamat: {kota: "malang", provinsi: "jawa timur"}
+            },
+            {
+                id: 4,
+                nama: "sari",
+                umur: 22,
+                skor: 70,
+                tidakAktif: false,
+                hobi: ["coding", "membaca"],
+                alamat: {kota: "surabaya", provinsi: "jawa timur"}
+            }
+        ];
+        
+        if (user.tidakAktif === true && user.skor < 80) {
+            console.log(user.nama + user.get('kota'));
+        } else {
+            console.log("tidak ada data yang sesuai");
+        }
+        console.log(user);
+
+    </script>
+</body>
+</html>
