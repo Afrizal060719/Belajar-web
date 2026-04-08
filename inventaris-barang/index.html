@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventaris Barang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inventaris Barang</h1>
+        <div class="card">
+            <h3>Tambah Barang</h3>
+            <div class="form">
+                <input type="text" id="namaBarang" placeholder="Nama">
+                <input type="text" id="hargaBarang" placeholder="hargaBarang">
+                <input type="text" id="stokBarang" placeholder="jumlahBarang">
+                <button id="btn">Tambah</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>daftar barang</h3>
+            <table>
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>subtotal</th>
+                        </tr>
+                    </thead>
+                <tbody id="tabelBody"></tbody>
+            </table>
+            <div class="total">
+                <strong>total aset:</strong>
+                <span id="totalAset">Rp0</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
