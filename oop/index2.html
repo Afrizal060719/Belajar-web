@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar OOP 2</title>
+</head>
+<body>
+    <h1>Belajar OOP</h1>
+
+    <script>
+        class Orang {
+            constructor(nama, umur) {
+                this.nama = nama;
+                this.umur = umur;
+            }
+
+            kenalan() {
+                console.log("hallo nama saya" + " " + this.nama + " " + "umur saya" + " " + this.umur);
+            }
+
+            tambahUmur() {
+                this.umur++;
+                console.log(`${this.umur}`);
+            }
+        }
+
+        let woman1 = new Orang("yoga", "20");
+        let woman2 = new Orang("alvin", "23");
+
+        woman1.kenalan();
+        woman1.tambahUmur();
+        woman1.kenalan();
+
+        woman1.kenalan();
+        woman2.kenalan();
+    </script>
+</body>
+</html>

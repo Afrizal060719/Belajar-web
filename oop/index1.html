@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar OOP 1</title>
+</head>
+<body>
+    <h1>Belajar OOP</h1>
+
+    <script>
+        class  Mobil {
+            constructor(merk, warna) {
+                this.merk = merk;
+                this.warna = warna;
+            }
+
+            jalan() {
+                console.log(this.merk + " " + "sedang jalan ");
+            }
+        }
+
+        let mobil1 = new Mobil("toyota", "merah");
+
+        mobil1.jalan();
+    </script>
+</body>
+</html>

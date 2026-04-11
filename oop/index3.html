@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar OOP 3</title>
+</head>
+<body>
+    <h1>Belajar OOP 3</h1>
+
+    <script>
+        class Hewan {
+            constructor(nama, jenis) {
+                this.nama = nama;
+                this.jenis = jenis;
+            }
+
+            suara() {
+                console.log(this.nama + " " + "bersuara");
+            }
+
+            gantiNama(namaBaru) {
+                this.nama = namaBaru;
+            }
+        }
+
+        let hewan1 = new Hewan("kucing", "persia");
+        let hewan2 = new Hewan("ayam", "unggas");
+
+        hewan1.suara();
+        hewan2.suara();
+        hewan1.gantiNama("harimau");
+        hewan1.suara(); 
+
+    </script>
+</body>
+</html>
