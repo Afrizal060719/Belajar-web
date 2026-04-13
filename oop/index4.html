@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar OOP</title>
+</head>
+<body>
+    <h1>Belajar OOP</h1>
+
+    <script>
+        class Hewan {
+            constructor(nama) {
+                this.nama = nama;
+            }
+
+            makan() {
+                console.log(`${this.nama}, sedang makan`);
+            }
+
+            info() {
+                console.log(`ini adalah hewan, ${this.nama}`);
+            }
+        }
+
+        class Kucing extends Hewan {
+            constructor(nama, warna) {
+                super(nama);
+                this.warna = warna;
+            }
+
+            suara() {
+                console.log(`${this.nama}, meong meong`);
+            }
+        }
+
+        class Anjing extends Hewan {
+            constructor(nama, warna, ras) {
+                super(nama, warna);
+                this.ras = ras;
+            }
+
+            suara() {
+                console.log(`${this.nama}, gukguk`);
+            }
+
+        }
+
+        const kucing1 = new Kucing("milo", "putih");
+        const anjing1 = new Anjing("adit", "buldog");
+
+        kucing1.makan();
+        kucing1.suara();
+
+        anjing1.makan();
+        anjing1.suara();
+
+        kucing1.info();
+        anjing1.info();
+    </script>
+</body>
+</html>

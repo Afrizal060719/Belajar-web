@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar OOP</title>
+    <style>
+        body {
+            background-color: rgb(24, 53, 98);
+        }
+    </style>
+</head>
+<body>
+    <h1>Belajar OOP inheritance</h1>
+
+    <script>
+        class Hewan {
+            constructor(nama) {
+                this.nama = nama;
+            }
+
+            makan() {
+                console.log(`${this.nama}, sedang makan`);
+            }
+
+            info() {
+                console.log(`ini adalah hewan yang bernama, ${this.nama}`);
+            }
+        }
+
+        class Kucing extends Hewan {
+            constructor(nama, warna) {
+                super(nama);
+                this.warna = warna;
+            }
+
+            suara() {
+                console.log(`${this.nama}, meong meong`);
+            }
+        }
+
+        class Anjing extends Hewan {
+            constructor(nama, ras) {
+                super(nama);
+                this.ras = ras;
+            }
+
+            suara() {
+                console.log(`${this.nama}, gukguk`);
+            }
+        }
+
+        function tampilSemuaHewan() {
+            for (let hewan of daftarHewan) {
+                if (hewan instanceof Kucing) {
+                    console.log('ini adalah kucing');
+                } else if (hewan instanceof Anjing) {
+                    console.log('ini adalah anjing');
+                }
+
+                hewan.info();
+                hewan.makan();
+                hewan.suara();
+            }
+        }
+
+        const daftarHewan = [];
+
+        daftarHewan.push(new Kucing('milo', 'orange'));
+        daftarHewan.push(new Anjing('mukhlas', 'persia'));
+        daftarHewan.push(new Kucing('lufy', 'blue'));
+        daftarHewan.push(new Anjing('adit', 'cmd'));
+
+        // for (let i = 0; i < daftarHewan.length; i++) {
+        //     const hewan = daftarHewan[i];
+
+        //     hewan.info();
+        //     hewan.makan();
+        //     hewan.suara();
+        // }
+
+        console.log(daftarHewan);   
+        tampilSemuaHewan();
+    </script>
+</body>
+</html>

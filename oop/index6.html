@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar OOP</title>
+</head>
+<body>
+    <h1>Belajar OOP Encapsulation</h1>
+
+    <script>
+        class AkunBank {
+            #saldo = 0;
+
+            tambahSaldo(jumlah) {
+                this.#saldo += jumlah // parameter jumlah untuk menerima data dari luar lalu di simpah ke saldo denfan +=
+            }
+
+            tarikSaldo(jumlah) {
+                if (jumlah > this.#saldo) {
+                    console.log('saldo tidak cukup');
+                } else {
+                    this.#saldo -= jumlah;
+                }
+            }
+
+            lihatSaldo() {
+                console.log(`saldo anda sekarang berjumlah Rp${this.#saldo}`);
+            }
+        }
+
+        const akun = new AkunBank();
+
+        akun.tambahSaldo(50000);
+        akun.tarikSaldo(25000);
+        akun.tambahSaldo(12000);
+        akun.lihatSaldo();
+    </script>
+</body>
+</html>

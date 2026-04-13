@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projek 1</title>
+    <style>
+      body {
+        font-family: Arial;
+        background: #1a2a44;
+        color: white;
+        padding: 20px;
+      }
+
+      input,
+      select,
+      button {
+        margin: 5px;
+        padding: 8px;
+      }
+
+      .card {
+        background: #2d4a7c;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Data Hewan</h1>
+
+    <input type="text" id="nama" placeholder="nama hewan" />
+
+    <select id="jenis">
+      <option value="kucing">Kucing</option>
+      <option value="anjing">Anjing</option>
+    </select>
+
+    <input type="text" id="extra" placeholder="warna / ras" />
+    <input type="number" id="saldo" placeholder="saldo awal" />
+
+    <button id="tambahBtn">Tambah</button>
+
+    <div id="listhewan"></div>
+
+    <script type="module">
+      import { tambahHewan, render } from './module/script.js';
+
+      const btn = document.getElementById('tambahBtn');
+      btn.addEventListener('click', () => {
+        const nama = document.getElementById('nama').value.trim();
+        const jenis = document.getElementById('jenis').value;
+        const extra = document.getElementById('extra').value.trim();
+        const saldoVal = document.getElementById('saldo').value;
+
+        // simple validation
+        if (!nama) {
+          alert('Masukkan nama hewan');
+          return;
+        }
+
+        const saldo = parseInt(saldoVal);
+        tambahHewan({ nama, jenis, extra, saldo });
+        // clear inputs
+        document.getElementById('nama').value = '';
+        document.getElementById('extra').value = '';
+        document.getElementById('saldo').value = '';
+      });
+
+      // initial render
+      render();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar OOP</title>
+</head>
+<body>
+    <h1>Belajar OOP</h1>
+
+    <script>
+        class BangunDatar {
+            luas() {
+                console.log('menghitung luas');
+            }
+        }
+
+        class Persegi extends BangunDatar {
+            constructor(sisi) {
+                super();
+                this.sisi = sisi;
+            }
+            luas() {
+                let hasil = this.sisi * this.sisi;
+                console.log(`persegi: luas = ${hasil}`);
+            }
+        }
+
+        class Lingkaran extends BangunDatar {
+            constructor(r) {
+                super();
+                this.r = r;
+            }
+
+            luas() {
+                let hasil = Math.PI * this.r * this.r
+                console.log(`Lingkaran: luas = ${hasil}`);
+            }
+        }
+
+        const persegi = new Persegi(12);
+        const lingkaran = new Lingkaran(6);
+        persegi.luas();
+        lingkaran.luas();
+    </script>
+</body>
+</html>
