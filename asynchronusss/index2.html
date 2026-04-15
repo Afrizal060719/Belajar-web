@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar asynchronus callback</title>
+</head>
+<body>
+    <h1>Belajar asynchronus callback</h1>
+
+    <script>
+        function ambilData(callback) {
+            console.log('loading');
+
+            setTimeout(() => {
+                callback('data sudah di ambil');
+            }, 4000);
+        }
+
+        ambilData(function(result) {
+            console.log(result)
+        });
+    </script>
+</body>
+</html>

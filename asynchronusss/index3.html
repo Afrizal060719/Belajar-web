@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan asynchronus</title>
+</head>
+<body>
+    <h1>latihan asynchronus</h1>
+
+    <script>
+        const data = {nama: "dani", umur: 18}
+
+        function loginUser(callback) {
+            console.log('proses login user');
+
+            setTimeout(() => {
+                console.log('login user berhasil');
+                callback();
+            }, 2000);
+        }
+
+        function ambilData(callback) {
+            setTimeout(() => {
+                callback(data);
+            }, 2000);
+        }
+
+        function tampilkanProfile(data) {
+            console.log("Nama: " + data.nama);
+            console.log("Umur: " + data.umur);
+        }
+
+        loginUser(function() {
+            ambilData(function(result) {
+                tampilkanProfile(result);
+            });
+        });
+    </script>
+</body>
+</html>
