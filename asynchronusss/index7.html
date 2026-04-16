@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar asynchronus</title>
+  </head>
+  <body>
+    <h1>promise</h1>
+
+    <script>
+      function ambilData() {
+        return new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            let data = "Data berhasil diambil!";
+            resolve(data);
+          }, 2000);
+        });
+      }
+
+      ambilData()
+        .then(function (result) {
+          console.log(result);
+        })
+        .catch(function (err) {
+          console.log(err);
+        });
+    </script>
+  </body>
+</html>
